@@ -13,7 +13,7 @@ const ListItem = ({ item, handleDelete, handleCheck }) => {
         <li ref={setNodeRef} style={style} {...attributes} {...listeners}>
             <label>
                 <div className="input-check">
-                    <input type="checkbox" className="check" value={item.checked} onChange={() => handleCheck(item.id)} />
+                    <input type="checkbox" className="check" checked={item.checked} onChange={() => handleCheck(item.id)} />
                     <div className="checkbox-custom"></div>
                 </div>
                 <p className="text">{item.text}</p>
