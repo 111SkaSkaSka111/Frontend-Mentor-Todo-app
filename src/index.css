@@ -4,6 +4,7 @@
     --bright-blue: #3a7bfd;
     --check-background: linear-gradient(to bottom right, #57ddff, #c058f3);
     --card-background: #fafafa;
+    --card-background-hover: #fafafa80;
     --body-background: #e4e5f1;
     --text-color-bottom: #d2d3db;
     --text-color-hover: #9394a5;
@@ -16,6 +17,7 @@
 
 .dark {
     --card-background: #252b35;
+    --card-background-hover: #252b3580;
     --body-background: #19212e;
     --text-color-bottom: #5c6170;
     --text-color-hover: #e4e5f1;
@@ -250,16 +252,26 @@ ul li:first-child {
     border-radius: 5px 5px 0 0;
 }
 
+ul li:hover .checkbox-custom {
+    border: 1px solid var(--bright-blue);
+}
+
 .todos ul li label .text {
     color: var(--text-color);
 }
 
 ul li:hover {
-    background: var(--text-color-bottom);
+    background: var(--card-background-hover);
 }
 
 ul li img {
     display: none;
+    transition: all 0.3s ease-in-out;
+}
+
+ul li img:hover {
+    scale: 1.2;
+    rotate: 90deg;
 }
 
 ul li:hover img {
