@@ -156,13 +156,11 @@ function App() {
                 <div className="todos">
                     <ul>
                         {filteredTodoList.length > 0 ? (
-                            <DndContext onDragEnd={handleDragEnd}>
-                                <SortableContext items={filteredTodoList}>
-                                    {filteredTodoList.map((item) => (
-                                        <ListItem key={item.id} item={item} handleDelete={handleDelete} handleCheck={handleCheck} />
-                                    ))}
-                                </SortableContext>
-                            </DndContext>
+                            <>
+                                {filteredTodoList.map((item) => (
+                                    <ListItems key={item.id} item={item} handleDelete={handleDelete} handleCheck={handleCheck} />
+                                ))}
+                            </>
                         ) : (
                             <p className="empty">Your list is empty</p>
                         )}
