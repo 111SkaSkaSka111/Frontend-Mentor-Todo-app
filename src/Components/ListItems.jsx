@@ -9,7 +9,7 @@ const ListItems = ({ item, handleDelete, handleCheck }) => {
                 <p className="text">{item.text}</p>
             </label>
             <div onClick={() => handleDelete(item.id)} className="">
-                <img src="/images/icon-cross.svg" alt="" />
+                <img src="/Frontend-Mentor-Todo-app/images/icon-cross.svg" alt="" />
             </div>
         </li>
     );

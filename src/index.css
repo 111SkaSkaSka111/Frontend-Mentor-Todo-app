@@ -47,9 +47,12 @@ ul {
     --sb-size: 6px;
 }
 
-body::-webkit-scrollbar,
-ul::-webkit-scrollbar {
+body::-webkit-scrollbar {
     width: var(--sb-size);
+}
+
+ul::-webkit-scrollbar {
+    width: 0;
 }
 
 body::-webkit-scrollbar-track,
@@ -127,6 +130,7 @@ main {
     flex-direction: column;
     justify-content: center;
     gap: 20px;
+    padding-inline: 20px;
 
     header {
         display: flex;
@@ -215,7 +219,7 @@ main {
 
     .todos {
         border-radius: 5px;
-        overflow: hidden;
+        /* overflow: hidden; */
         box-shadow: 10px 10px 30px var(--shadow);
     }
 }
@@ -243,7 +247,7 @@ ul li {
 }
 
 ul li:first-child {
-    border-radius: 5px 0 0 0;
+    border-radius: 5px 5px 0 0;
 }
 
 .todos ul li label .text {
@@ -321,6 +325,7 @@ label {
     background-color: var(--card-background);
     border-radius: 0 0 5px 5px;
     border-top: 1px solid var(--body-background);
+    position: relative;
 
     p {
         color: var(--text-color-bottom);
@@ -362,4 +367,34 @@ label {
 .drag {
     text-align: center;
     margin-top: 1.5rem;
+}
+
+@media screen and (max-width: 568px) {
+    .background {
+        background-image: url(/images/bg-mobile-light.jpg);
+    }
+
+    .dark .background {
+        background-image: url(/images/bg-mobile-dark.jpg);
+    }
+
+    .wrapper {
+        padding-bottom: 80px;
+    }
+    .actions {
+        .buttons {
+            position: absolute;
+            /* bottom: -70px; */
+            top: 150%;
+            left: 0;
+            width: 100%;
+            border-radius: 5px;
+            background: var(--card-background);
+            box-shadow: 5px 5px 30px var(--shadow);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-block: 15px;
+        }
+    }
 }

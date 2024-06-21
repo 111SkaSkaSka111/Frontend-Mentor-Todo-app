@@ -129,6 +129,8 @@ function App() {
         }
     };
 
+    const filteredTodoListActive = filteredTodoList.filter((item) => !item.checked);
+
     const handleApperence = () => {
         const main = document.querySelector("main");
 
@@ -166,7 +168,7 @@ function App() {
                         )}
                     </ul>
 
-                    <ActionsItem list={todoList} filter={filter} handleClearCompleted={handleClearCompleted} handleShowAll={handleShowAll} handleShowActive={handleShowActive} handleShowCompleted={handleShowCompleted} />
+                    <ActionsItem list={filteredTodoListActive} filter={filter} handleClearCompleted={handleClearCompleted} handleShowAll={handleShowAll} handleShowActive={handleShowActive} handleShowCompleted={handleShowCompleted} />
                 </div>
 
                 {/* <p className="drag">Drag and drop to reorder list</p> */}
