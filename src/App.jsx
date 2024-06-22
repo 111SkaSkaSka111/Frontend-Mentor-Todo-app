@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import ListItem from "./Components/ListItem";
+import ListItem from "./Components/ListItemDndKit";
 import { DndContext } from "@dnd-kit/core";
 import { SortableContext } from "@dnd-kit/sortable";
 import ActionsItem from "./Components/ActionsItem";
@@ -40,7 +40,7 @@ function App() {
     const handleInputText = (event) => {
         if (event.key === "Enter") {
             const value = event.target.value;
-            const newId = todoList.length + 1;
+            const newId = todoList.length > 0 ? Math.max(...todoList.map((item) => item.id)) + 1 : 1;
 
             const currentTime = getCurrentDateTime();
 
