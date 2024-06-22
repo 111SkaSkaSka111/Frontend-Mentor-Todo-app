@@ -226,6 +226,28 @@ main {
     }
 }
 
+.actions-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    background-color: var(--card-background);
+    border-radius: 5px 5px 0 0;
+    border-bottom: 1px solid var(--body-background);
+    color: var(--text-color);
+
+    img {
+        cursor: pointer;
+        width: 20px;
+        aspect-ratio: 1;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            scale: 1.2;
+        }
+    }
+}
+
 ul {
     max-height: 300px;
     overflow-y: auto;
@@ -248,9 +270,9 @@ ul li {
     border-bottom: 1px solid var(--body-background);
 }
 
-ul li:first-child {
+/* ul li:first-child {
     border-radius: 5px 5px 0 0;
-}
+} */
 
 ul li:hover .checkbox-custom {
     border: 1px solid var(--bright-blue);
@@ -281,6 +303,11 @@ ul li:hover img {
 label {
     display: flex;
     align-items: center;
+
+    p {
+        max-width: 300px;
+        overflow: hidden;
+    }
 }
 
 .input-check {

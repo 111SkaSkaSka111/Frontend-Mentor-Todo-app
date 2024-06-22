@@ -156,6 +156,10 @@ function App() {
                     <input type="text" placeholder="Create a new todo..." className="input-text" onKeyUp={handleInputText} />
                 </div>
                 <div className="todos">
+                    <div className="actions-top">
+                        <p>Total {todoList.length} items</p>
+                        <img src="/Frontend-Mentor-Todo-app/images/arrows-down-up.svg" alt="" />
+                    </div>
                     <ul>
                         {filteredTodoList.length > 0 ? (
                             <>
