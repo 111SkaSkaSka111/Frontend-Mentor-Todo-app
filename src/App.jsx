@@ -143,7 +143,10 @@ function App() {
             <div className="wrapper">
                 <header>
                     <h1>TODO</h1>
-                    <div className="logo-apperence" onClick={handleApperence}></div>
+                    <div className="logo-apperence" onClick={handleApperence}>
+                        <img src="/Frontend-Mentor-Todo-app/images/icon-moon.svg" alt="" />
+                        <img src="/Frontend-Mentor-Todo-app/images/icon-sun.svg" alt="" />
+                    </div>
                 </header>
                 <div className="input">
                     <label>

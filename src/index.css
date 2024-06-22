@@ -112,16 +112,42 @@ main {
 
 .logo-apperence {
     cursor: pointer;
-    background-image: url(/images/icon-moon.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 25px;
-    aspect-ratio: 1;
+    width: 30px;
+    height: 30px;
+    max-width: 30px;
+    max-height: 30px;
     border-radius: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    gap: 10px;
+    position: relative;
+
+    img {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        transition: all 0.3s;
+    }
+
+    & img:first-child {
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+    }
+
+    & img:last-child {
+        top: 150%;
+        left: 50%;
+        translate: -50% -50%;
+    }
 }
 
 .dark .logo-apperence {
-    background-image: url(/images/icon-sun.svg);
+    img {
+        transform: translateY(-150%);
+    }
 }
 
 .wrapper {
